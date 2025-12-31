@@ -1,0 +1,95 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #ffd6e8, #cfe9ff);
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  color: #ffffff;
+  overflow-x: hidden;
+}
+
+.top-text {
+  margin-top: 18px;
+  font-size: 16px;
+  opacity: 0.9;
+}
+
+.title {
+  margin-top: 22px;
+  font-family: 'Pacifico', cursive;
+  font-size: 46px;
+  text-shadow: 0 6px 15px rgba(0,0,0,0.25);
+}
+
+.message {
+  max-width: 680px;
+  margin: 20px auto;
+  padding: 0 20px;
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+.scene {
+  width: 320px;
+  height: 220px;
+  margin: 50px auto;
+  perspective: 1200px;
+}
+
+.carousel {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  animation: rotate 24s linear infinite;
+}
+
+.carousel img {
+  position: absolute;
+  width: 300px;
+  height: 200px;
+  top: 10px;
+  left: 10px;
+  border-radius: 18px;
+  object-fit: cover;
+  box-shadow: 0 18px 40px rgba(0,0,0,0.35);
+}
+
+.carousel img:nth-child(1) { transform: rotateY(0deg) translateZ(420px); }
+.carousel img:nth-child(2) { transform: rotateY(45deg) translateZ(420px); }
+.carousel img:nth-child(3) { transform: rotateY(90deg) translateZ(420px); }
+.carousel img:nth-child(4) { transform: rotateY(135deg) translateZ(420px); }
+.carousel img:nth-child(5) { transform: rotateY(180deg) translateZ(420px); }
+.carousel img:nth-child(6) { transform: rotateY(225deg) translateZ(420px); }
+.carousel img:nth-child(7) { transform: rotateY(270deg) translateZ(420px); }
+.carousel img:nth-child(8) { transform: rotateY(315deg) translateZ(420px); }
+
+@keyframes rotate {
+  from { transform: rotateY(0deg); }
+  to { transform: rotateY(360deg); }
+}
+
+.animate-down { animation: down 1.4s ease forwards; }
+.animate-up { animation: up 1.6s ease forwards; }
+.animate-up-delay { animation: up 2.1s ease forwards; }
+.animate-zoom { animation: zoom 2.4s ease forwards; }
+
+@keyframes down {
+  from { opacity: 0; transform: translateY(-25px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes up {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes zoom {
+  from { opacity: 0; transform: scale(0.85); }
+  to { opacity: 1; transform: scale(1); }
+}

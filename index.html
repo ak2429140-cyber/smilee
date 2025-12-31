@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>For Smile 💖</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Pacifico&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    /* Play button styling */
+    #playBtn {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: #ffb6c1; /* cute pink */
+      color: white;
+      border: none;
+      padding: 15px 30px;
+      font-size: 20px;
+      font-family: 'Pacifico', cursive;
+      border-radius: 50px;
+      cursor: pointer;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+      z-index: 9999;
+    }
+    #playBtn:hover {
+      background: #ff69b4;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Play Button -->
+  <button id="playBtn">Play Song ❤️</button>
+  
+  <!-- Audio -->
+  <audio id="mySong" loop>
+    <source src="audio/song.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <div class="top-text animate-down">
+    Just a small surprise for Madam ji 💕
+  </div>
+
+  <h1 class="title animate-up">
+    Happy New Year Babe  💕
+  </h1>
+
+  <p class="message animate-up-delay">
+    Smile,
+From 6 July 2024, 9:00 PM to 31 December 2025, 12:00 PM — 543 days and 3 hours — my heart learned your name and stayed there.
+No hurry, no weight on you. Just stay safe, breathe easy, and keep smiling.
+I’m right here — quietly, gently, always for you.
+I love you sweetheart✨
+  </p>
+
+  <div class="scene animate-zoom">
+    <div class="carousel">
+      <img src="images/1.jpg">
+      <img src="images/2.jpg">
+      <img src="images/3.jpg">
+      <img src="images/4.jpg">
+      <img src="images/5.jpg">
+      <img src="images/6.jpg">
+      <img src="images/7.jpg">
+      <img src="images/8.jpg">
+    </div>
+  </div>
+
+  <script>
+    // Play button script
+    const btn = document.getElementById('playBtn');
+    const song = document.getElementById('mySong');
+
+    btn.addEventListener('click', () => {
+      song.play();
+      btn.style.display = 'none'; // hide button
+    });
+  </script>
+
+</body>
+</html>
